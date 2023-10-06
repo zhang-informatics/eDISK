@@ -71,6 +71,7 @@ nav a {
 .project-description {
     text-align: right;
     margin-top: 20px;
+    display: inline-block;
 }
 
 #cur_research h1 {
@@ -80,7 +81,7 @@ nav a {
 #cur_research p {
     color: white;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     line-height: 1.5;
     font-family: 'Trebuchet MS'
@@ -103,10 +104,11 @@ nav a {
 }
 
 .logo {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 10px;
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+    /*align-items: flex-end;*/
+    /*margin-top: 10px;*/
+    display: inline-block;
 }
 
 .logo img {
@@ -127,39 +129,33 @@ section.module h1 {
 }
 
 .institution {
+    display: flex;
+    align-items: center;
     margin: 20px 0;
-    text-align: center;
 }
 
 .institution-logo img {
     max-width: 200px; /* Adjust logo size as needed */
-    margin-bottom: 10px; /* Add spacing between logo and members */
+    margin-right: 20px; /* Add spacing between logo and members */
 }
 
-.team-members {
+.faculty-members {
     display: flex;
-    flex-direction: column; /* Display members in a column */
+    flex-wrap: wrap; /* Allow faculty members to wrap onto a new line */
     align-items: center; /* Center align members */
     margin-top: 20px;
 }
 
-.faculty-members,
-.non-faculty-members {
-    display: flex; /* Display faculty and non-faculty members in a row */
-    flex-wrap: wrap; /* Wrap members onto multiple lines if needed */
-    justify-content: center; /* Center align members within their section */
-    margin-top: 10px; /* Add spacing between faculty and non-faculty sections */
-}
-
 .team-member {
-    flex: 1;
+    width: 200px; /* Fixed width for team member panels */
+    height: 240px; /* Fixed height for team member panels */
     text-align: center;
     background-color: #f5f5f5;
-    padding: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     margin: 10px;
+    overflow: hidden; /* Hide content that overflows the fixed-size panel */
 }
 
 .team-member:hover {
@@ -169,11 +165,63 @@ section.module h1 {
 .team-member img {
     max-width: 150px; /* Adjust image size as needed */
     border-radius: 50%; /* Makes the images circular */
+    margin-top: 10px;
 }
 
 .team-member h3 {
     margin-top: auto; /* Push names to the bottom of the container */
+    margin-top: 10px;
+    margin-bottom: 10px; /* Add spacing between name and image */
 }
+
+/*.institution {*/
+/*    margin: 20px 0;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.institution-logo img {*/
+/*    max-width: 200px; !* Adjust logo size as needed *!*/
+/*    margin-bottom: 10px; !* Add spacing between logo and members *!*/
+/*}*/
+
+/*.team-members {*/
+/*    display: flex;*/
+/*    flex-direction: column; !* Display members in a column *!*/
+/*    align-items: center; !* Center align members *!*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*.faculty-members,*/
+/*.non-faculty-members {*/
+/*    display: flex; !* Display faculty and non-faculty members in a row *!*/
+/*    flex-wrap: wrap; !* Wrap members onto multiple lines if needed *!*/
+/*    justify-content: center; !* Center align members within their section *!*/
+/*    margin-top: 10px; !* Add spacing between faculty and non-faculty sections *!*/
+/*}*/
+
+/*.team-member {*/
+/*    flex: 1;*/
+/*    text-align: center;*/
+/*    background-color: #f5f5f5;*/
+/*    padding: 5px;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*    transition: transform 0.2s;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.team-member:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
+
+/*.team-member img {*/
+/*    max-width: 150px; !* Adjust image size as needed *!*/
+/*    border-radius: 50%; !* Makes the images circular *!*/
+/*}*/
+
+/*.team-member h3 {*/
+/*    margin-top: auto; !* Push names to the bottom of the container *!*/
+/*}*/
 
 .output {
     margin: 20px 50px 20px 50px;
