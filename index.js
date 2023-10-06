@@ -1,8 +1,17 @@
-// Get a reference to the div element by its ID
-var clickableDiv = document.getElementById("ruizhang");
 
-// Add a click event listener to the div
-clickableDiv.addEventListener("click", function() {
-    // Redirect to a URL when the div is clicked
-    window.open("http://Ruizhang.umn.edu", "_blank"); // Replace with your desired URL
-});
+var personal_web_dict = {
+    "rui": "http://Ruizhang.umn.edu",
+    "julian": "https://directory.sph.umn.edu/bio/sph-a-z/julian-wolfson",
+    "steven": "https://healthinformatics.umn.edu/staff/steven-johnson",
+    "kelvin": "https://healthinformatics.umn.edu/staff/kelvin-lim",
+    "serguei": "https://healthinformatics.umn.edu/staff/serguei-pakhomov",
+    "jeffery": "https://www.pharmacy.umn.edu/our-faculty-staff/our-faculty/jeffrey-bishop",
+    "jeremy": "https://ruizhang.umn.edu/jeremy-yeung",
+    "hongfang": "https://sbmi.uth.edu/faculty-and-staff/hongfang-liu.htm",
+    "liwei": "https://sbmi.uth.edu/faculty-and-staff/liwei-wang.htm"
+};
+function openWeb(element){
+    var divId = element.id
+    var url = personal_web_dict[divId];
+    window.open(url, '_blank');
+}
