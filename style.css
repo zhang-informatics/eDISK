@@ -147,8 +147,9 @@ section.module h1 {
 }
 
 .team-member {
+    position: relative;
     width: 200px; /* Fixed width for team member panels */
-    height: 240px; /* Fixed height for team member panels */
+    height: 265px; /* Fixed height for team member panels */
     text-align: center;
     background-color: white;
     border-radius: 10px;
@@ -171,7 +172,16 @@ section.module h1 {
 .team-member h3 {
     margin-top: auto; /* Push names to the bottom of the container */
     margin-top: 10px;
-    margin-bottom: 10px; /* Add spacing between name and image */
+    margin-bottom: 5px; /* Add spacing between name and image */
+}
+
+.team-member p {
+    color: gray;
+    position: absolute; /* Position the <p> element absolutely */
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 0; /* Position it on the left side */
+    width: 100%; /* Make it full-width within the parent div */
+    text-align: center; /* Center-align the text horizontally */
 }
 
 .output {
